@@ -9,21 +9,6 @@ name: CI (macOS, Windows)
 # win: everything, then not docs, Markdown or .github, then this file again. Kept in step in
 # both lists (no YAML anchors: not every workflow tool reads them).
 on:
-  push:
-    branches: [main]
-    paths:
-      - "**"
-      - "!docs/**"
-      - "!**/*.md"
-      - "!.github/**"
-      - ".github/workflows/platforms.yml"
-  pull_request:
-    paths:
-      - "**"
-      - "!docs/**"
-      - "!**/*.md"
-      - "!.github/**"
-      - ".github/workflows/platforms.yml"
   workflow_dispatch:
 
 permissions:
